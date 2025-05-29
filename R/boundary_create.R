@@ -9,10 +9,14 @@
 #'
 #' @examples
 #' \dontrun{
-#' boundary_create(points_sf, 750, 102039)
+#' boundary_create(my_points, 750, 102039)
 #' }
 boundary_create = function(points_shape, buffer_radius, pjctn_crs){
-  points_pjctn = sf::st_transform(points_shape, pjctn_crs)
+  if (is.null(sf::st_crs(pjctn_crs)$units)) {
+    stop("CRS must have units")
+  }
+
+  points_pjctn = sf::st_transform(points_shape, pjctn_crs)  # reproject
   buffer_pjctn = sf::st_buffer(points_pjctn, buffer_radius)
   bounds_default = sf::st_bbox(sf::st_transform(buffer_pjctn, sf::st_crs(points_shape)))
   return(bounds_default)

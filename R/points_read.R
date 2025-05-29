@@ -6,6 +6,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' points_read("path/to/my/file")
+#' }
 points_read <- function(points_file) {
   sf::read_sf(points_file)
 }

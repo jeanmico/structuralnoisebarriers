@@ -15,3 +15,8 @@ a dataframe
 \description{
 Read user-supplied file of points
 }
+\examples{
+\dontrun{
+points_read("path/to/my/file")
+}
+}

@@ -6,7 +6,6 @@
 #' @return sf object containing all structures and roads
 #' @export
 #'
-#' @examples
 road_structure_append = function(roads_shp, structure_shp){
   if (sf::st_crs(roads_shp) != sf::st_crs(structure_shp)){
     stop("Road and structures CRS differ.")
