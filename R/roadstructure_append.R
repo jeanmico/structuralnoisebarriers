@@ -1,4 +1,6 @@
-#' Title
+#' Appending sf objects
+#'
+#' synchronizing columns between to sf objects and returning an appended sf object
 #'
 #' @param roads_shp roads (sf object)
 #' @param structure_shp structures (such as buildings and walls) (sf object)
