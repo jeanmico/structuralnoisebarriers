@@ -11,7 +11,7 @@ test_that("boundary accurate", {
                       lat = c(42.254431, 42.251837))
   tstpts = sf::st_as_sf(tstpts, coords = c("lon", "lat"), crs=4326)
   sf::st_crs(tstpts) = 4326
-  expect_equal(round(boundary_create(tstpts, 750, 102039), 5),
+  expect_equal(round(boundary_create(tstpts, 750, "ESRI:102039"), 5),
                sf::st_bbox(c(xmin = -71.78740, xmax = -71.76747,
                              ymax = 42.26114, ymin = 42.24513),
                            crs = sf::st_crs(4326)))
