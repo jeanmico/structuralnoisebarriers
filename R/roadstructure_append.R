@@ -18,6 +18,10 @@ road_structure_append = function(roads_shp, structure_shp){
   structure_shp[cols_add_builds] <- NA
   structure_shp = structure_shp[, colnames(roads_shp)]
 
-  fulldf = rbind(structure_shp, roads_shp)
+  if (all(colnames(roads_shp) != colnames(structure_shp))) {
+    stop("column names of roads and structures differ")
+  }
+
+  fulldf = rbind(roads_shp, structure_shp)
   return(fulldf)
 }
