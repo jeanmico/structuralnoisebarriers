@@ -4,6 +4,8 @@
 # structuralnoisebarriers
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/jeanmico/structuralnoisebarriers/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jeanmico/structuralnoisebarriers/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of structuralnoisebarriers is to identify structural obstacles
