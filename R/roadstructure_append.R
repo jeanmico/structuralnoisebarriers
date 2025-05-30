@@ -1,8 +1,11 @@
 #' Appending sf objects
-#' synchronizing columns between to sf objects and returning an appended sf object
+#'
+#' synchronizes column names and appends sf objects
+#'
 #' @family mapfunctions
 #' @param roads_shp roads (sf object)
 #' @param structure_shp structures (such as buildings and walls) (sf object)
+#'
 #'
 #' @return sf object containing all structures and roads
 #' @export

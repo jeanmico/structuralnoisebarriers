@@ -21,6 +21,8 @@ knitr::opts_chunk$set(
 
 The goal of structuralnoisebarriers is to identify structural obstacles to road noise sources. It reads in a file of points of interest and a file of roads.
 
+You can view the full documentation [here](https://jeanmico.github.io/structuralnoisebarriers/)
+
 ## Installation
 
 You can install the development version of structuralnoisebarriers from [GitHub](https://github.com/) with:
